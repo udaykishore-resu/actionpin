@@ -1,0 +1,26 @@
+/* Inline labels are CSS-generated content, so no nodes are inserted into GitHub's own DOM
+   and the label text is never included when code is selected or copied. */
+[data-actionpin]::after {
+  content: attr(data-actionpin-label);
+  margin-left: 10px;
+  padding: 1px 8px;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  font: 500 11px/1.5 ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  user-select: none;
+  pointer-events: none;
+}
+[data-actionpin="ok"]::after {
+  color: var(--fgColor-success, #1a7f37);
+  background: var(--bgColor-success-muted, rgba(26, 127, 55, 0.1));
+}
+[data-actionpin="warn"]::after {
+  color: var(--fgColor-attention, #8a5a00);
+  background: var(--bgColor-attention-muted, rgba(154, 103, 0, 0.12));
+}
+[data-actionpin="danger"]::after {
+  color: var(--fgColor-danger, #c21f2b);
+  background: var(--bgColor-danger-muted, rgba(209, 36, 47, 0.1));
+}

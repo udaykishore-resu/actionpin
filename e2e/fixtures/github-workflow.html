@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en" data-color-mode="light">
+<head><meta charset="utf-8"><title>demo/.github/workflows/ci.yml at main · acme/demo</title>
+<style>
+ body{font:14px system-ui;margin:24px;color:#1f2328}
+ .react-file-line,.blob-code,pre{font:12px/20px ui-monospace,Menlo,monospace;white-space:pre}
+ .pl-ent{color:#116329}.pl-s{color:#0a3069}.pl-c{color:#59636e}
+ table{border-collapse:collapse} td{padding:0 8px}
+ textarea{position:absolute;left:-9999px}
+</style></head>
+<body>
+<h2>Blob view (React-style line markup)</h2>
+<div class="react-code-lines">
+<div class="react-code-text"><div id="LC1" class="react-file-line"><span class="pl-ent">name</span>: <span class="pl-s">CI</span></div></div>
+<div class="react-code-text"><div id="LC2" class="react-file-line"><span class="pl-ent">jobs</span>:</div></div>
+<div class="react-code-text"><div id="LC3" class="react-file-line">    <span class="pl-ent">steps</span>:</div></div>
+<div class="react-code-text"><div id="LC4" class="react-file-line">      - <span class="pl-ent">uses</span>: <span class="pl-s" id="t-tag">actions/checkout@v4</span></div></div>
+<div class="react-code-text"><div id="LC5" class="react-file-line">      - <span class="pl-ent">uses</span>: <span class="pl-s" id="t-branch">actions/checkout@main</span></div></div>
+<div class="react-code-text"><div id="LC6" class="react-file-line">      - <span class="pl-ent">uses</span>: <span class="pl-s" id="t-good">actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683</span> <span class="pl-c"><span class="pl-c">#</span> v4.2.2</span></div></div>
+<div class="react-code-text"><div id="LC7" class="react-file-line">      - <span class="pl-ent">uses</span>: <span class="pl-s" id="t-lie">actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683</span> <span class="pl-c"><span class="pl-c">#</span> v3</span></div></div>
+<div class="react-code-text"><div id="LC8" class="react-file-line">      - <span class="pl-ent">uses</span>: <span class="pl-s" id="t-quoted"><span class="pl-pds">"</span>actions/checkout@v5<span class="pl-pds">"</span></span></div></div>
+<div class="react-code-text"><div id="LC9" class="react-file-line">      - <span class="pl-ent">uses</span>: <span class="pl-s" id="t-docker">docker://alpine:3.20</span></div></div>
+<div class="react-code-text"><div id="LC10" class="react-file-line">      - <span class="pl-ent">uses</span>: <span class="pl-s" id="t-local">./.github/actions/setup</span></div></div>
+<div class="react-code-text"><div id="LC11" class="react-file-line">      - <span class="pl-ent">uses</span>: <span class="pl-s" id="t-missing">zz-no-such-owner-q9x/nope@v1</span></div></div>
+<div class="react-code-text"><div id="LC12" class="react-file-line">      - <span class="pl-ent">run</span>: <span class="pl-s" id="t-run">echo actions/checkout@v4</span></div></div>
+<div class="react-code-text"><div id="LC13" class="react-file-line">      <span class="pl-c" id="t-comment"># uses: actions/checkout@v1</span></div></div>
+</div>
+<textarea id="read-only-cursor-text-area" aria-label="file content">      - uses: actions/checkout@v2
+      - uses: some/hidden-textarea-only@v9</textarea>
+
+<h2>Diff view (table cells)</h2>
+<table><tbody>
+<tr><td class="blob-num">4</td><td class="blob-code blob-code-addition"><span class="blob-code-inner">+      - <span class="pl-ent">uses</span>: <span class="pl-s" id="d-tag">actions/checkout@v3</span></span></td></tr>
+</tbody></table>
+
+<h2>README snippet (one unhighlighted pre, several lines)</h2>
+<pre id="plain">steps:
+  - uses: actions/checkout@v4.2.1
+  - uses: actions/checkout@v4.1.0
+  - run: make</pre>
+</body></html>

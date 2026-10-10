@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>ci.yml</title>
+<style>
+  body{margin:0;background:#ffffff;color:#1f2328;font:14px/1.5 ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
+  .top{height:48px;border-bottom:1px solid #d1d9e0;display:flex;align-items:center;padding:0 28px;font-weight:600;color:#59636e}
+  .file{margin:18px 0 0 40px;width:820px;border:1px solid #d1d9e0;border-radius:8px;overflow:hidden}
+  .name{background:#f6f8fa;border-bottom:1px solid #d1d9e0;padding:8px 14px;font:600 13px ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+  .lines{padding:8px 0}
+  .react-file-line{font:12.5px/21px ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;white-space:pre;padding:0 14px}
+  .pl-ent{color:#116329}.pl-s{color:#0a3069}.pl-c{color:#59636e}
+</style></head>
+<body>
+<div class="top">acme / shop-api (demo page)</div>
+<div class="file"><div class="name">.github/workflows/ci.yml</div><div class="lines">
+<div class="react-file-line"><span class="pl-ent">name</span>: <span class="pl-s">CI</span></div>
+<div class="react-file-line"><span class="pl-ent">on</span>: [<span class="pl-s">push</span>, <span class="pl-s">pull_request</span>]</div>
+<div class="react-file-line"><span class="pl-ent">jobs</span>:</div>
+<div class="react-file-line">  <span class="pl-ent">build</span>:</div>
+<div class="react-file-line">    <span class="pl-ent">runs-on</span>: <span class="pl-s">ubuntu-latest</span></div>
+<div class="react-file-line">    <span class="pl-ent">steps</span>:</div>
+<div class="react-file-line">      - <span class="pl-ent">uses</span>: <span class="pl-s">actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683</span> <span class="pl-c"># v4.2.2</span></div>
+<div class="react-file-line">      - <span class="pl-ent">uses</span>: <span class="pl-s">actions/setup-go@v5</span></div>
+<div class="react-file-line">      - <span class="pl-ent">uses</span>: <span class="pl-s">golangci/golangci-lint-action@master</span></div>
+<div class="react-file-line">      - <span class="pl-ent">run</span>: <span class="pl-s">go test ./...</span></div>
+<div class="react-file-line">  <span class="pl-ent">image</span>:</div>
+<div class="react-file-line">    <span class="pl-ent">runs-on</span>: <span class="pl-s">ubuntu-latest</span></div>
+<div class="react-file-line">    <span class="pl-ent">steps</span>:</div>
+<div class="react-file-line">      - <span class="pl-ent">uses</span>: <span class="pl-s">actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683</span> <span class="pl-c"># v3</span></div>
+<div class="react-file-line">      - <span class="pl-ent">uses</span>: <span class="pl-s">docker/login-action@v3</span></div>
+<div class="react-file-line">      - <span class="pl-ent">uses</span>: <span class="pl-s">docker/build-push-action@v6</span></div>
+<div class="react-file-line">      - <span class="pl-ent">uses</span>: <span class="pl-s">docker://alpine:3.20</span></div>
+</div></div>
+</body></html>

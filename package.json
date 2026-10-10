@@ -1,0 +1,17 @@
+{
+  "name": "actionpin",
+  "version": "0.2.1",
+  "private": true,
+  "description": "Chrome extension: SHA-pin lens for GitHub Actions. Shows which `uses:` lines are pinned to a commit, resolves tags to SHAs, and flags wrong version comments.",
+  "author": "Udaykishore Resu",
+  "license": "MIT",
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "e2e": "node e2e/run.js",
+    "screenshots": "node store/make-screenshots.js",
+    "package": "bash scripts/package.sh"
+  },
+  "devDependencies": {
+    "playwright": "^1.56.0"
+  }
+}
